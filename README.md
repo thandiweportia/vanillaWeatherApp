@@ -1,2 +1,2 @@
 # vanillaWeatherApp
-the site for the application is https://fastidious-muffin-553350.netlify.app
+the site for the application is https://exquisite-zabaione-780f75.netlify.app
