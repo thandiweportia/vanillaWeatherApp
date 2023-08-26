@@ -114,5 +114,29 @@ function formatDate(timestamp) {
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);
   
-  search("Johannesburg");
+search("Johannesburg");
   
+  // Function to set background image based on time
+function setBackgroundByTime() {
+    const now = new Date();
+    const hours = now.getHours();
+
+    let backgroundImage = '';
+
+    if (hours >= 1 && hours <= 6) {
+        backgroundImage = 'early.jpg';
+    } else if (hours >= 6 && hours <= 11) {
+        backgroundImage = 'morning.jpg';
+    } else if (hours >= 11 && hours <= 18) {
+        backgroundImage = 'day.jpg';
+    } else {
+        backgroundImage = 'night.jpg';
+    }
+
+    document.body.style.backgroundImage = `url('image/${backgroundImage}')`;
+}
+
+// Call the function when the page loads
+window.onload = setBackgroundByTime;
+
+
